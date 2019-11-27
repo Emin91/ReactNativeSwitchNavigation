@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text} from 'react-native'
+import {View, Text, Button} from 'react-native'
 import {styles} from '../style/style'
 
 class DetailsScreen extends Component {
@@ -8,6 +8,10 @@ class DetailsScreen extends Component {
       return (
         <View style={styles.container}>
           <Text style={{ color: '#fff', fontSize: 50, }}>Details page</Text>
+          <Button 
+                title="Go to Home page"
+                onPress={() => this.props.navigation.navigate('Home')}>
+          </Button>
         </View>
       );
     }
